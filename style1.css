@@ -525,3 +525,10 @@
   hr {
       margin: 10px 0;
   }
+
+  #linker {
+
+      font-size: 1.2em;
+      color: #FF0000;
+  }
+  
