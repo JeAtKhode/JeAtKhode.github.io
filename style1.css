@@ -526,9 +526,11 @@
       margin: 10px 0;
   }
 
-  .linker {
+.linker{
+  font-size: 1.2em;
+      color: #3c01d2;
+}
 
-      font-size: 1.2em;
-      color: #FF0000;
-  }
-  
+.linker:hover{
+  color: #FF0000;
+}
