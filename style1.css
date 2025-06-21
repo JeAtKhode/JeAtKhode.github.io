@@ -35,7 +35,7 @@
     .header {
       background-color: #ffffff ;
       opacity:0.9;
-        text-align: center;
+      text-align: center;
     }
 
 /* Style the top navigation bar */
@@ -178,13 +178,11 @@
 
 /* on education page */
     .box{
-      
       text-align: center;
     }
 
     #projects{
       background-color:   #ffffff;
-    
       border-radius: 15px;
       
     }
@@ -467,13 +465,7 @@
     .listtg {
       color:  #5a5a5a;
     }
-
-
-
-
-
-
-
+    
     .rowexp {
       display: flex;
       flex-wrap: wrap;
