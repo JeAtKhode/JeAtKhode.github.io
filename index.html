@@ -26,12 +26,11 @@
     </nav>
   </div>
   <main>
-    <div class="pgtitle">Welcome to My Portfolio</div>
     <div class="picdiv">
       <img src="jeet/profile1.jpg" class="pic1" alt="profile_pic_jeet">
     </div>
     <div class="titleme">
-      <h1 style="color:#222;">Jeet Khoda</h1>
+      <h1 style="color:#ff0000;">Jeet Khoda</h1>
       <h2 style="color:#222;">Bachelor of Applied IT Student</h2>
       </div>
     <div class="infohome card">
@@ -49,5 +48,28 @@
       <a href="mailto:jeetkhoda0201@gmail.com">Email: jeetkhoda0201@gmail.com</a></p>
     </div>
   </footer>
+  <script>
+    // Icon hover swap logic
+    const iconMap = {
+      'gt.png': 'gth.png',
+      'likd.png': 'likdh.png',
+      'gm.jpg': 'gmh.jpg',
+      'cv.png': 'cvh.png'
+    };
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.leftlinks a img').forEach(function(img) {
+        const origSrc = img.getAttribute('src');
+        const hoverSrc = iconMap[origSrc.split('/').pop()];
+        if (hoverSrc) {
+          img.addEventListener('mouseenter', function() {
+            img.setAttribute('src', 'icons/' + hoverSrc);
+          });
+          img.addEventListener('mouseleave', function() {
+            img.setAttribute('src', origSrc);
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
