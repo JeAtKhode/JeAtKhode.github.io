@@ -108,5 +108,36 @@
       <a href="mailto:jeetkhoda0201@gmail.com">Email: jeetkhoda0201@gmail.com</a></p>
     </div>
   </footer>
+  <script>
+    // Header icon hover swap logic that keeps each page's relative path intact.
+    const iconMap = {
+      "gt.png": "gth.png",
+      "likd.png": "likdh.png",
+      "gm.jpg": "gmh.jpg",
+      "cv.png": "cvh.png"
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".leftlinks a img").forEach(function (img) {
+        const originalSrc = img.getAttribute("src");
+        const parts = originalSrc.split("/");
+        const originalFile = parts[parts.length - 1];
+        const hoverFile = iconMap[originalFile];
+
+        if (!hoverFile) {
+          return;
+        }
+
+        img.addEventListener("mouseenter", function () {
+          parts[parts.length - 1] = hoverFile;
+          img.setAttribute("src", parts.join("/"));
+        });
+
+        img.addEventListener("mouseleave", function () {
+          img.setAttribute("src", originalSrc);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
