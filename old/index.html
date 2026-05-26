@@ -13,7 +13,7 @@
 <body>
 <!-- background video -->
   <video autoplay muted loop ID="myVideo">
-        <source src="BGVIDEIO.mp4" type="video/mp4">
+        <source src="../BGVIDEIO.mp4" type="video/mp4">
   </video>
 
   <div class="header">
@@ -22,19 +22,19 @@
 <!-- links to contact me -->
 
       <a href="https://github.com/JeAtKhode" class="leftlink" target="_blank">
-        <img src="icons/gt.png" alt="Github_link" class="imgs1">
+        <img src="../icons/gt.png" alt="Github_link" class="imgs1">
       </a>
 
       <a href="https://www.linkedin.com/in/jeet-khoda-730b60275/" class="leftlink" target="_blank">
-        <img src="icons/likd.png" alt="LinkedIN_link" class="imgs2">
+        <img src="../icons/likd.png" alt="LinkedIN_link" class="imgs2">
       </a>
 
       <a href="mailto:jeetkhoda0201@gmail.com" class="leftlink">
-        <img src="icons/gm.jpg" alt="gmail_link" class="imgs3">
+        <img src="../icons/gm.jpg" alt="gmail_link" class="imgs3">
       </a>
 
-      <a href="Jeet_Khoda_CV.pdf" class="leftlink" target="_blank">
-        <img src="icons/cv.png" alt="cv_link" class="imgs4">
+      <a href="../Jeet_Khoda_CV.pdf" class="leftlink" target="_blank">
+        <img src="../icons/cv.png" alt="cv_link" class="imgs4">
 
 <!-- links to other pages -->
       <a class="rightlink" href="Experince.html">Experience</a>
@@ -46,7 +46,7 @@
   <br>
   <!-- profile picture -->
 <div class="picdiv">
-<img src="jeet/profile1.jpg" class="pic1" alt="profile_pic_jeet">
+<img src="../jeet/profile1.jpg" class="pic1" alt="profile_pic_jeet">
 </div>
 <!-- home page title  -->
   <div class="titleme">
@@ -83,5 +83,29 @@
   </div>
 
 </footer>
+
+<script>
+// Icon hover swap logic for old project
+const iconMap = {
+  'gt.png': 'gth.png',
+  'likd.png': 'likdh.png',
+  'gm.jpg': 'gmh.jpg',
+  'cv.png': 'cvh.png'
+};
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.leftlink img').forEach(function(img) {
+    const origSrc = img.getAttribute('src');
+    const hoverSrc = iconMap[origSrc.split('/').pop()];
+    if (hoverSrc) {
+      img.addEventListener('mouseenter', function() {
+        img.setAttribute('src', '../icons/' + hoverSrc);
+      });
+      img.addEventListener('mouseleave', function() {
+        img.setAttribute('src', origSrc);
+      });
+    }
+  });
+});
+</script>
 
 </html>
